@@ -3,7 +3,7 @@ package com.example.demo.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "users") // <- important: avoid reserved word "user"
+@Table(name = "users")  // Avoid reserved SQL keyword 'user'
 public class User {
 
     @Id
@@ -13,11 +13,8 @@ public class User {
     private String name;
     private String email;
 
-    // ✅ Default constructor is required by JPA
-    public User() {
-    }
+    // Getters and setters
 
-    // ✅ Full getters and setters
     public Long getId() {
         return id;
     }
